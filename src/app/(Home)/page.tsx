@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import { Emilys_Candy } from "next/font/google";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,15 +7,6 @@ const emilysCandy = Emilys_Candy({
     weight: ['400'],
 });
 
-const itemVariants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.6
-        },
-    },
-}
 
 export default function Home() {
     return (
