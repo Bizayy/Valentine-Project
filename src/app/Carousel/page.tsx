@@ -16,7 +16,7 @@ const imageList = [
 
 const Carousel: React.FC = () => {
     return (
-        <div className="banner">
+        <div className="banner relative">
             <div
                 className="slider"
                 // Using a CSS custom property (--quantity) for the total count of items.
@@ -36,7 +36,10 @@ const Carousel: React.FC = () => {
             <motion.h1
                 animate={{ scale: [1, 1.1, 1], }}
                 transition={{ duration: 4, ease: "easeIn", repeat: Infinity }}
-                className='text-slate-300 text-6xl font-bold drop-shadow-[0_35px_35px_rgba(0,0,0,1)]'>Our Memories together</motion.h1>
+                className='absolute bottom-[20%] sm:bottom-[10%] lg:bottom-[40%] text-slate-300 text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-[0_35px_35px_rgba(0,0,0,1)]'>
+
+                Our Memories together
+            </motion.h1>
         </div>
     );
 };

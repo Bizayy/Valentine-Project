@@ -13,7 +13,7 @@ body {
 
 body::before {
     position: absolute;
-    width: min(1400px, 90vw);
+    width: min(1300px, 90vw);
     top: 10%;
     left: 50%;
     height: 90%;
@@ -40,10 +40,10 @@ body::before {
     position: absolute;
     width: 200px;
     height: 250px;
-    top: 10%;
+    top: 15%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
-    transform: perspective(1000px);
+    transform: perspective(1450px);
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
@@ -52,11 +52,11 @@ body::before {
 /* Keyframes for auto rotation */
 @keyframes autoRun {
     from {
-        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+        transform: perspective(1450px) rotateX(-16deg) rotateY(0deg);
     }
 
     to {
-        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+        transform: perspective(1450px) rotateX(-16deg) rotateY(360deg);
     }
 }
 
@@ -74,30 +74,57 @@ body::before {
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    ;
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1023px) {
+
+@media screen and (max-width: 1279px) {
     .banner .slider {
-        width: 160px;
-        height: 200px;
-        left: calc(50% - 80px);
+        width: 200px;
+        height: 250px;
+        left: calc(50% - 100px);
     }
 
     .banner .slider .item {
-        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg));
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(450px);
+    }
+}
+
+
+
+@media screen and (max-width: 639px) {
+    .banner .slider {
+        width: 80px;
+        height: 50vh;
+        left: calc(50% - 40px);
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(150px);
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .banner .slider {
+        width: 220px;
+        height: 270px;
+        left: calc(50% - 100px);
+    }
+
+    .banner .slider .item {
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))translateZ(330px);
     }
 }
 
 @media screen and (max-width: 767px) {
     .banner .slider {
-        width: 100px;
-        height: 150px;
+        width: 105px;
+        height: 200px;
         left: calc(50% - 50px);
     }
 
     .banner .slider .item {
-        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
+        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
     }
 }
