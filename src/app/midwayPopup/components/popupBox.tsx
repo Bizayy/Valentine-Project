@@ -9,9 +9,8 @@ const emilysCandy = Emilys_Candy({
     weight: ['400'],
 })
 
-type inputProps = {};
 
-const PopupBox = forwardRef<HTMLInputElement, inputProps>((_, ref) => {
+const PopupBox = forwardRef<HTMLInputElement>((_, ref) => {
     const router = useRouter();
 
     return (
