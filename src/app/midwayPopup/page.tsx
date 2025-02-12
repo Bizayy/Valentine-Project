@@ -3,12 +3,6 @@ import React from 'react'
 import { motion } from "framer-motion";
 import PopupBox from './components/popupBox';
 import { useRef } from 'react';
-import { Emilys_Candy } from 'next/font/google';
-
-const emilysCandy = Emilys_Candy({
-    subsets: ['latin'],
-    weight: ['400'],
-})
 
 const Page = () => {
 

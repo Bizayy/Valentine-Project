@@ -2,6 +2,7 @@
 import React from 'react';
 import "./carouselCss.css";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import 'swiper/css/pagination';
 import imageList from './utils/imageList';
 import SwiperComponent from './components/swiper/swiperComponent';
@@ -22,7 +23,7 @@ const Carousel: React.FC = () => {
                         // Setting the CSS variable --position for each image (1-indexed)
                         style={{ '--position': index + 1 } as React.CSSProperties}
                     >
-                        <img src={imgName} alt={`Dragon ${index + 1}`} />
+                        <Image width={200} height={200} src={imgName} alt={`Couple Picture ${index + 1}`} className='w-full h-full' />
                     </div>
                 ))}
             </div>
