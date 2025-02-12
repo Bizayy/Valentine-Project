@@ -42,4 +42,6 @@ const PopupBox = forwardRef<HTMLInputElement, void>((_, ref) => {
     )
 });
 
+PopupBox.displayName = "PopupBox"; // Fix for ESLint error
+
 export default PopupBox;
