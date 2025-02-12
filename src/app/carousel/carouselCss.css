@@ -93,14 +93,18 @@ body::before {
 
 
 @media screen and (max-width: 639px) {
+
+    .banner {
+        flex-direction: column;
+        background-color: #01000c;
+    }
+
     .banner .slider {
-        width: 80px;
-        height: 50vh;
-        left: calc(50% - 40px);
+        visibility: hidden;
     }
 
     .banner .slider .item {
-        transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(150px);
+        visibility: hidden;
     }
 }
 
